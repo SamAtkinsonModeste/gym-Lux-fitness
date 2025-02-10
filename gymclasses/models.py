@@ -11,7 +11,7 @@ class GymClasses(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, related_name="gymclasses")
+        User, on_delete=models.SET_NULL, null=True, related_name="gymclasses")
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.CharField(choices=STATUS, default="0")

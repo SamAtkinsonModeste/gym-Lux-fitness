@@ -1,8 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import GymClasses
 
 # Create your views here.
 
 
-def home_page_view(response):
-    return HttpResponse("Home Page")
+class GymClassesListView(ListView):
+    model = GymClasses
+    context_object_name = "gymclasses"

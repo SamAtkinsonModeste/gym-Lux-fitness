@@ -14,11 +14,11 @@ class GymClasses(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.CharField(choices=STATUS, default="0")
-    excert = models.TextField(blank=True)
+    excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Class: {self.title} created on {self.created_on} last updated on {self.updated_on}"
+        return f"Class: {self.title} created on {self.created_on}"

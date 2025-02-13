@@ -403,3 +403,4 @@ FodyWeavers.xsd
 
 #my project 4
 env.py
+fixtures/

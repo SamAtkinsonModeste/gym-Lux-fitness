@@ -1,10 +1,41 @@
-<h1>Home Page</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--  gymclasses_list.html content starts here-->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Gymclasses Info Row -->
+        <div class="row">
+            {% for item in gymclasses %}
+
+            <div
+                class="col-lg-4 col-md-6 col-12 {% if forloop.last and gymclasses|length|divisibleby:2 == False%} mx-md-auto {% endif %}">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+
+                        </div>
+                        <div class="image-flash">
+                            <h2>{{ item.title }}</h2>
+                            <a href="http://"> Read More</a>
+                        </div>
+                    </div>
+                </div>
 
 
-{% for item in gymclasses %}
-<div class="gymclassess">
+            </div>
 
-    <h2>{{ item.title }}</h2>
+            {% endfor %}
+        </div>
+
+
+
+    </div>
+
+
 
 </div>
-{% endfor %}
+<!-- gymclasses_list.html content ends here -->
+{% endblock %}

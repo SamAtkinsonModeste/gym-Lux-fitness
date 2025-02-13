@@ -38,9 +38,21 @@ body {
 }
 
 
-.lino-didot {
+.lino-didot,
+.gymclass-title {
     font-family: linotype-didot, serif;
 }
+
+.gymclass-title {
+    color: var(--my-brand-accent-color);
+    text-shadow: 0 1px 1px var(--my-brand-dark-color);
+}
+
+.gymclass-name {
+    color: var(--drak-grey);
+    text-shadow: 0 1px 1px var(--my-brand-accent-color);
+}
+
 
 .gymclass-link {
     position: absolute;
